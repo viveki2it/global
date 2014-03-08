@@ -1,0 +1,32 @@
+<%= form_for(@employee) do |f| %>
+  <% if @employee.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% @employee.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <table width="100%">
+    <tr>
+      <td>E-mail</td>
+      <td><%= f.email_field :email %></td>
+    </tr>
+    <tr>
+      <td>Salary</td>
+      <td><%= f.text_field :salary %></td>
+    </tr>
+    <tr>
+      <td>Rank</td>
+      <td><%= f.text_field :rank %></td>
+    </tr>
+    <tr>
+      <td>Flag?</td>
+      <td><%= f.check_box :flag %></td>
+    </tr>
+    <tr>
+      <td colspan="2"><%= f.submit :save %></td>
+    </tr>
+  </table>
+<% end %>

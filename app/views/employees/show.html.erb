@@ -1,0 +1,16 @@
+<%cache @employee do%>
+  <table width="100%">
+    <tr>
+      <td>E-mail</td>
+      <td><%= @employee.email %></td>
+    </tr>
+    <tr>
+      <td>Salary</td>
+      <td><%= @employee.salary %></td>
+    </tr>
+    <tr>
+      <td>Rank</td>
+      <td><%= @employee.rank %></td>
+    </tr>
+  </table>
+<% end %>

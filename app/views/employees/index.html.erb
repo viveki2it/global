@@ -1,0 +1,19 @@
+<%cache @employees do %>
+  <h1>Employees</h1>
+  <table width="80%" border="1">
+    <tr>
+      <th>E-mail</th>
+      <th>Salary</th>
+      <th>Rank</th>
+      <th>Action</th>
+    </tr>
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= employee.email %></td>
+        <td><%= employee.salary %></td>
+        <td><%= employee.rank %></td>
+        <td><%= link_to "show", employee_path(employee) %></td>
+      </tr>
+    <%end%>
+  </table>
+<% end %>
